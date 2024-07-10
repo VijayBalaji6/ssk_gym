@@ -1,0 +1,22 @@
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">ELEVATE YOUR WORKOUT</h1>
+        <p class="hero-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <div class="hero-actions">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-secondary">
+                <span class="play-icon">&#9658;</span> Play video
+            </button>
+        </div>
+        <div class="social-icons" *ngFor="let socialAccountElement of socialAccountElements">
+            <a href="#" class="social-icon">
+                <img src="assets/icons/{{socialAccountElement}}.svg" alt="{{socialAccountElement}}">
+            </a>
+        </div>
+    </div>
+</section>
