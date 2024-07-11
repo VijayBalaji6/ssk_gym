@@ -1,0 +1,36 @@
+<div class="call-section">
+    <h2>Call us Today</h2>
+    <h1>{{ phoneNumber }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis</p>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="logo-section">
+            <img src="assets/fitguru-logo.png" alt="FitGuru Logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+        </div>
+
+        <div class="menu-section">
+            <h3>Menu</h3>
+            <ul>
+                <li *ngFor="let item of menuItems">{{ item }}</li>
+            </ul>
+        </div>
+
+        <div class="social-section">
+            <h3>Social Media</h3>
+            <ul>
+                <li *ngFor="let social of socialMedia">
+                    <i class="icon-{{ social.icon }}"></i> {{ social.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        {{ copyright }}
+    </div>
+</footer>

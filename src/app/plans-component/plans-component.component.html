@@ -1,0 +1,26 @@
+<section class="packages">
+    <h2>Our List Packages</h2>
+
+    <div class="billing-toggle">
+        <button [class.active]="billingCycle === 'monthly'" (click)="billingCycle = 'monthly'">Billed Monthly</button>
+        <button [class.active]="billingCycle === 'yearly'" (click)="billingCycle = 'yearly'">Billed Yearly</button>
+    </div>
+
+    <div class="package-list">
+        <div *ngFor="let pkg of packages" class="package-card" [class.best-offer]="pkg.isBestOffer">
+            <h3>{{ pkg.name }}</h3>
+            <div class="price">${{ pkg.price }}</div>
+            <div class="billing-cycle">per month, bill annually</div>
+
+            <ul class="features">
+                <li *ngFor="let feature of pkg.features">
+                    <span class="checkmark">✓</span> {{ feature }}
+                </li>
+            </ul>
+
+            <button class="register-btn">Register Now</button>
+
+            <div *ngIf="pkg.isBestOffer" class="best-offer-label">Best Offer</div>
+        </div>
+    </div>
+</section>

@@ -1,13 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-home-component',
+  selector: "app-home-component",
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './home-component.component.html',
-  styleUrl: './home-component.component.css',
+  imports: [CommonModule, RouterModule],
+  templateUrl: "./home-component.component.html",
+  styleUrl: "./home-component.component.css",
 })
 export class HomeComponentComponent {
-  socialAccountElements: string[] = ['Facebook', 'Instagram'];
+  gymLogo: string = "src/assets/home/nav_bar/gym_logo.svg";
+  workOutMan: string = "src/assets/home/nav_bar/gym_logo.svg";
+  navBarElements: string[] = ["home", "about", "trainers", "plans", "reviews"];
+  socialAccountElements: string[] = ["Facebook", "Instagram"];
 }

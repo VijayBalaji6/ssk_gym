@@ -1,22 +1,37 @@
-<section class="hero">
+<header class="header">
+    <img class="header-logo" src="../../../assets/home/nav_bar/gym_logo.svg" alt="SSK Gym">
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-item" *ngFor="let navBarElement of navBarElements">
+                <a routerLink="/{{navBarElement}}" routerLinkActive="active"> {{navBarElement|titlecase}}</a>
+            </li>
+        </ul>
+    </nav>
+    <button class="join-now-btn">Join Now</button>
+</header>
+
+<main class="hero">
     <div class="hero-content">
-        <h1 class="hero-title">ELEVATE YOUR WORKOUT</h1>
-        <p class="hero-text">
+        <h1 class="home-message-title">ELEVATE YOUR WORKOUT</h1>
+        <p class="home-message">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
             do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <div class="hero-actions">
-            <button class="btn btn-primary">Get Started</button>
-            <button class="btn btn-secondary">
-                <span class="play-icon">&#9658;</span> Play video
+        <div class="cta-buttons">
+            <button class="get-started">Get Started</button>
+            <button class="play-video">
+                <span class="play-icon"></span>
+                Play video
             </button>
         </div>
-        <div class="social-icons" *ngFor="let socialAccountElement of socialAccountElements">
-            <a href="#" class="social-icon">
-                <img src="assets/icons/{{socialAccountElement}}.svg" alt="{{socialAccountElement}}">
-            </a>
+        <div class="social-icons">
+            <a href="#" class="facebook"></a>
+            <a href="#" class="instagram"></a>
         </div>
     </div>
-</section>
+    <div class="hero-image">
+        <img src="../../../assets/home/workout_man.svg" alt="Man working out">
+    </div>
+</main>

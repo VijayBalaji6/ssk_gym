@@ -1,0 +1,30 @@
+<section class="trainers-section">
+    <h2>Meet Our Trainers</h2>
+    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna a</p>
+
+    <div class="trainer-cards">
+        <div class="trainer-card" *ngFor="let trainer of trainers">
+            <img [src]="trainer.imageUrl" [alt]="trainer.name">
+            <div class="trainer-info" *ngIf="trainer.name">
+                <h3>{{ trainer.name }}</h3>
+                <p>{{ trainer.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="coaches-section">
+        <div class="coaches-images">
+            <img src="assets/coach1.jpg" alt="Coach 1">
+            <img src="assets/coach2.jpg" alt="Coach 2">
+        </div>
+        <div class="coaches-info">
+            <h3>ARE YOU LOOKING FOR A MENTOR?</h3>
+            <h2>COACHES</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            <button class="explore-more">Explore More</button>
+        </div>
+    </div>
+</section>
